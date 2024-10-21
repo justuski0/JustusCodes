@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset margins, padding, and box sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Asap'; /* Use 'Asap' font */
+    text-decoration: none; /* Remove text decoration */
+    border: none;
+    outline: none;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Define CSS variables for colors */
+:root {
+    --bg-color: #141414; /* Main background color */
+    --second-bg-color: #101a25; /* Secondary background color */
+    --text-color: #ffffff; /* Main text color */
+    --main-color: #18f7b8; /* Accent color */
+}
+
+/* Set the body background and text color */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Set the base font size and color for the entire document */
+html {
+    font-size: 63%; /* Adjust font size for easier scaling */
+    color: var(--text-color);
+}
+
+/* Set minimum height and padding for sections */
+section {
+    min-height: 50vh;
+    padding: 10rem 9% 2rem;
+}
+
+/* Header styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: #141414; /* Transparent background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* Ensure header is above other elements */
+}
+
+/* Logo styling */
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700; /* Bold font */
+}
+
+/* Change color of part of the logo */
+.logo span {
+    color: blue;
+}
+
+/* Navbar links styling */
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect on navbar links */
+.navbar a:hover {
+    color: var(--main-color); /* Change color on hover */
+}
+
+/* Active link styling */
+.navbar a.active {
+    color: var(--main-color);
+}
+
+/* Menu icon styling (initially hidden) */
+#menu-icon {
+    font-size: 3.5rem;
+    color: var(--text-color);
+    display: none;
+}
+
+/* Home section styling */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Home content heading styles */
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+/* Apply margin to the second heading in home content */
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+/* Home content accent color */
+.home-content span {
+    color: var(--main-color);
+}
+
+/* Main heading (h1) styling */
+.home-content h1 {
+    font-size: 5.7rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* Paragraph in home content */
+.home-content p {
+    font-size: 2.1rem;
+}
+
+/* Image styling in home section */
+.home-img img {
+    width: 30vw;
+    border-radius: 40%; /* Rounded corners */
+    animation: IMG 2s ease-in-out infinite; /* Infinite animation */
+}
+
+/* Keyframes for image animation (up and down motion) */
+@keyframes IMG {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.5rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Social media icon styling */
+.social-media-icon a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    background: transparent;
+    border: .2rem solid var(--main-color); /* Border with main color */
+    border-radius: 10px;
+    margin: 2rem 5rem 3rem 0;
+    transition: .5s ease; /* Smooth transition */
+}
+
+/* Hover effect for social media icons */
+.social-media-icon a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 2rem var(--main-color); /* Glowing shadow effect */
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 1.5rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 3rem;
+    box-shadow: 0 0 2rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    font-weight: 600;
+    transition: .5s ease;
+    cursor: pointer;
+    text-transform: uppercase; /* All caps */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+    box-shadow: none;
+}
+
+/* Footer styling */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background: var(--second-bg-color); /* Use secondary background */
+}
+
+/* Footer text styling */
+.footer-text p {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* Span element inside footer text */
+.footer-text p span {
+    color: blue;
+}
+
+/* Media query for screens 1200px and below */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Media query for screens 990px and below */
+@media (max-width: 990px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .footer {
+        padding: 2rem 4%;
+    }
+}
+
+/* Media query for screens 768px and below */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block; /* Display menu icon */
+    }
+
+    #logo2 {
+        display: none; /* Hide secondary logo */
+    }
+
+    .header {
+        background: var(--bg-color); /* Background for small screens */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none; /* Hidden by default */
+    }
+
+    .navbar.active {
+        display: block; /* Display navbar when active */
+    }
+
+    .navbar a {
+        display: block; /* Block-level links */
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column; /* Stack home content vertically */
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem; /* Adjust heading size */
+    }
+
+    .home-content h1 {
+        font-size: 5rem; /* Adjust main heading size */
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .social-media-icon a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+}
+
+/* Media query for screens 450px and below */
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* Media query for screens 360px and below */
+@media (max-width: 360px) {
+    .footer {
+        flex-direction: column-reverse; /* Stack footer elements */
+    }
+}
+
+/* About section styling */
+.about {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 2rem 9%;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* Heading in about section */
+.about h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-color); /* Accent color for heading */
+}
+
+/* Paragraph styling in about section */
+.about p {
+    font-size: 1.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Skills section styling */
+.skills {
+    background: var(--second-bg-color);
+    padding: 5rem 9%;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* Heading in skills section */
+.skills h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+}
+
+/* Paragraph styling in skills section */
+.skills p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Unordered list in skills section */
+.skills ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0;
+}
+
+/* List item in skills section */
+.skills li {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+/* Projects section styling */
+.projects {
+    background: var(--second-bg-color);
+    padding: 5rem 9%;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* Heading in projects section */
+.projects h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+}
+
+/* Paragraph styling in projects section */
+.projects p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Project list styling */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Individual project box styling */
+.project {
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Project title */
+.project h3 {
+    font-size: 2rem;
+}
+
+/* Links inside projects */
+.project a {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+/* Contact section styling */
+.contact {
+    background: var(--second-bg-color);
+    padding: 5rem 9%;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* Heading in contact section */
+.contact h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+}
+
+/* Paragraph styling in contact section */
+.contact p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Links in contact section */
+.contact a {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+.circle {
+    position: absolute;
+    border: solid 1.8px #18f7b8; /* Adjust if needed */
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%;  
+    pointer-events: none; /* Ensures circle doesn’t interfere with mouse events */
+    transition: opacity 0.2s; /* Smooth opacity change */
+    animation: spin 2s linear infinite; /* Apply spinning animation */
+    z-index: 9999; /* Ensure the circle is above other elements */
+
+}
